@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F60C39B-E22F-43B0-81C4-D8FFFAFC00A2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SecureWomen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BEB34A38F6CAEC12EA2A2B045F81504E2659F533</key>
+		<string>https://github.com/negialpana/SecureWomen</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SecureWomen.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BEB34A38F6CAEC12EA2A2B045F81504E2659F533</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/negialpana/SecureWomen</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BEB34A38F6CAEC12EA2A2B045F81504E2659F533</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEB34A38F6CAEC12EA2A2B045F81504E2659F533</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SecureWomen</string>
+		</dict>
+	</array>
+</dict>
+</plist>
