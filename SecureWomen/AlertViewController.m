@@ -1,23 +1,24 @@
 //
-//  SettingsViewController.m
+//  AlertViewController.m
 //  SecureWomen
 //
 //  Created by Alpana Negi on 07/03/15.
+//  Copyright (c) 2015 Airwatch. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "AlertViewController.h"
 #import "SettingsKeys.h"
 
-@interface SettingsViewController ()
+@interface AlertViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation AlertViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:DEFAULT_COLOR];
+    [self.view setBackgroundColor : DEFAULT_COLOR];
 }
 
 - (void)didReceiveMemoryWarning {

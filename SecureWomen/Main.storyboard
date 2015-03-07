@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="754"/>
+            <point key="canvasLocation" x="1199" y="628"/>
         </scene>
         <!--Choose Types-->
         <scene sceneID="gir-OY-7YJ">
@@ -116,13 +116,17 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0u-cr-DwW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="754"/>
+            <point key="canvasLocation" x="2089" y="628"/>
         </scene>
-        <!--Map-->
+        <!--Nearby Help-->
         <scene sceneID="UK5-fD-DWn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jle-iB-eqV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" image="MapMarker.png" selectedImage="MapMarker.png" id="DKu-At-VZr"/>
+                    <tabBarItem key="tabBarItem" title="Nearby Help" image="MapIcon.png" selectedImage="MapIcon.png" id="DKu-At-VZr">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="MapIcon"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tBc-du-lL0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -135,7 +139,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bU-Wh-YHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="754"/>
+            <point key="canvasLocation" x="685" y="628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bfk-ny-8Xe">
@@ -153,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJS-SY-vcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429" y="754"/>
+            <point key="canvasLocation" x="1626" y="628"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="saV-RA-ckU">
@@ -166,13 +170,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="jq2-eZ-lxd" kind="relationship" relationship="viewControllers" id="shk-fc-75i"/>
                         <segue destination="jle-iB-eqV" kind="relationship" relationship="viewControllers" id="La3-RD-4pG"/>
                         <segue destination="bxH-lx-Jif" kind="relationship" relationship="viewControllers" id="hnc-uB-GkR"/>
+                        <segue destination="47U-Ay-MrX" kind="relationship" relationship="viewControllers" id="HWS-Mc-wwq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yku-eW-Ld0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="754"/>
+            <point key="canvasLocation" x="-42" y="1639"/>
         </scene>
         <!--Settings-->
         <scene sceneID="o9S-MY-csO">
@@ -187,16 +193,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon.png" selectedImage="SettingsIcon.png" id="nTi-1a-5ii"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon.png" selectedImage="SettingsIcon.png" id="nTi-1a-5ii">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="SelectedImage" value="SettingsIcon"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb8-5c-RYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="1554"/>
+            <point key="canvasLocation" x="685" y="1294"/>
+        </scene>
+        <!--Alert-->
+        <scene sceneID="jrf-aT-tq8">
+            <objects>
+                <viewController id="jq2-eZ-lxd" customClass="AlertViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z7t-7a-3GF"/>
+                        <viewControllerLayoutGuide type="bottom" id="MGl-wu-Ffz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MNa-ba-3Kd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alert" image="AlertIcon.png" selectedImage="AlertIcon.png" id="9Rf-BO-LxG">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="AlertIcon"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXF-ti-p6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="1954"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="Q6g-tj-OPS">
+            <objects>
+                <viewController id="47U-Ay-MrX" customClass="TutorialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGl-Bv-Mr0"/>
+                        <viewControllerLayoutGuide type="bottom" id="hFU-sG-p2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="52U-TG-M1h">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tutorial" image="TutorialIcon.png" selectedImage="TutorialIcon.png" id="1gk-zm-2u8">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="TutorialIcon"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ASB-c9-EOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="2619"/>
         </scene>
     </scenes>
     <resources>
-        <image name="MapMarker.png" width="30" height="30"/>
+        <image name="AlertIcon" width="30" height="55"/>
+        <image name="AlertIcon.png" width="30" height="30"/>
+        <image name="MapIcon" width="30" height="55"/>
+        <image name="MapIcon.png" width="30" height="30"/>
+        <image name="SettingsIcon" width="30" height="55"/>
         <image name="SettingsIcon.png" width="30" height="30"/>
+        <image name="TutorialIcon" width="30" height="55"/>
+        <image name="TutorialIcon.png" width="30" height="30"/>
         <image name="icon_me.png" width="30" height="55"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

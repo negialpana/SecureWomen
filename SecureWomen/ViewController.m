@@ -6,6 +6,7 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 #import "PlaceTypeTableViewController.h"
+#import "SettingsKeys.h"
 
 @interface ViewController ()<CLLocationManagerDelegate, GMSMapViewDelegate, PlaceTypeTableViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *pinImage;
@@ -25,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view setBackgroundColor:DEFAULT_COLOR];
     _searchTypes =  @[@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
     
     _locatonManager = [[CLLocationManager alloc] init];

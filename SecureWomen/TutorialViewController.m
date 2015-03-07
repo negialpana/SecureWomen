@@ -1,22 +1,22 @@
 //
-//  SettingsViewController.m
+//  TutorialViewController.m
 //  SecureWomen
 //
 //  Created by Alpana Negi on 07/03/15.
+//  Copyright (c) 2015 Airwatch. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "TutorialViewController.h"
 #import "SettingsKeys.h"
 
-@interface SettingsViewController ()
+@interface TutorialViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation TutorialViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self.view setBackgroundColor:DEFAULT_COLOR];
 }
 

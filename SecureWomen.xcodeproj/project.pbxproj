@@ -34,9 +34,15 @@
 		E524AD711AAAD9D9008FF283 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E524AD701AAAD9D9008FF283 /* SystemConfiguration.framework */; };
 		E90710631AAB383E000C8D43 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E90710621AAB383E000C8D43 /* GoogleMaps.bundle */; };
 		E90710681AAB3B7F000C8D43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E90710671AAB3B7F000C8D43 /* Default-568h@2x.png */; };
-		E907106C1AAB3E0E000C8D43 /* MapMarker.png in Resources */ = {isa = PBXBuildFile; fileRef = E907106B1AAB3E0E000C8D43 /* MapMarker.png */; };
+		E907106C1AAB3E0E000C8D43 /* MapIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E907106B1AAB3E0E000C8D43 /* MapIcon.png */; };
 		E907106E1AAB3F40000C8D43 /* SettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E907106D1AAB3F40000C8D43 /* SettingsIcon.png */; };
 		E90710711AAB408D000C8D43 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90710701AAB408D000C8D43 /* SettingsViewController.m */; };
+		E90710771AAB444C000C8D43 /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90710761AAB444C000C8D43 /* TutorialViewController.m */; };
+		E907107A1AAB445E000C8D43 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90710791AAB445E000C8D43 /* AlertViewController.m */; };
+		E907107E1AAB4638000C8D43 /* TutorialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E907107C1AAB4638000C8D43 /* TutorialIcon.png */; };
+		E90710811AAB46A1000C8D43 /* AlertIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E90710801AAB46A1000C8D43 /* AlertIcon.png */; };
+		E9D17CFE1AAB4D5800742700 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17CFC1AAB4D5800742700 /* icon@2x.png */; };
+		E9D17CFF1AAB4D5800742700 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17CFD1AAB4D5800742700 /* icon@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +93,19 @@
 		E524AD701AAAD9D9008FF283 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E90710621AAB383E000C8D43 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		E90710671AAB3B7F000C8D43 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E907106B1AAB3E0E000C8D43 /* MapMarker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapMarker.png; sourceTree = "<group>"; };
+		E907106B1AAB3E0E000C8D43 /* MapIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapIcon.png; sourceTree = "<group>"; };
 		E907106D1AAB3F40000C8D43 /* SettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsIcon.png; sourceTree = "<group>"; };
 		E907106F1AAB408D000C8D43 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		E90710701AAB408D000C8D43 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		E90710751AAB444C000C8D43 /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		E90710761AAB444C000C8D43 /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		E90710781AAB445E000C8D43 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		E90710791AAB445E000C8D43 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		E907107B1AAB44BE000C8D43 /* SettingsKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsKeys.h; sourceTree = "<group>"; };
+		E907107C1AAB4638000C8D43 /* TutorialIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TutorialIcon.png; sourceTree = "<group>"; };
+		E90710801AAB46A1000C8D43 /* AlertIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertIcon.png; sourceTree = "<group>"; };
+		E9D17CFC1AAB4D5800742700 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		E9D17CFD1AAB4D5800742700 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +193,11 @@
 				E51680E91AAB001E0047DFE8 /* PlaceMarker.m */,
 				E907106F1AAB408D000C8D43 /* SettingsViewController.h */,
 				E90710701AAB408D000C8D43 /* SettingsViewController.m */,
+				E90710751AAB444C000C8D43 /* TutorialViewController.h */,
+				E90710761AAB444C000C8D43 /* TutorialViewController.m */,
+				E90710781AAB445E000C8D43 /* AlertViewController.h */,
+				E90710791AAB445E000C8D43 /* AlertViewController.m */,
+				E907107B1AAB44BE000C8D43 /* SettingsKeys.h */,
 				E51680F81AAB36060047DFE8 /* GoogleDataProvider.h */,
 				E51680F91AAB36060047DFE8 /* GoogleDataProvider.m */,
 				E51680E61AAAE6350047DFE8 /* Main.storyboard */,
@@ -221,8 +241,12 @@
 			children = (
 				E51680E41AAAE1D70047DFE8 /* icon_me@2x.png */,
 				E90710671AAB3B7F000C8D43 /* Default-568h@2x.png */,
-				E907106B1AAB3E0E000C8D43 /* MapMarker.png */,
+				E907106B1AAB3E0E000C8D43 /* MapIcon.png */,
 				E907106D1AAB3F40000C8D43 /* SettingsIcon.png */,
+				E907107C1AAB4638000C8D43 /* TutorialIcon.png */,
+				E90710801AAB46A1000C8D43 /* AlertIcon.png */,
+				E9D17CFC1AAB4D5800742700 /* icon@2x.png */,
+				E9D17CFD1AAB4D5800742700 /* icon@3x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -307,14 +331,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90710811AAB46A1000C8D43 /* AlertIcon.png in Resources */,
 				E524AD411AAAD6ED008FF283 /* LaunchScreen.xib in Resources */,
 				E51680E71AAAE6350047DFE8 /* Main.storyboard in Resources */,
 				E524AD3E1AAAD6ED008FF283 /* Images.xcassets in Resources */,
-				E907106C1AAB3E0E000C8D43 /* MapMarker.png in Resources */,
+				E907106C1AAB3E0E000C8D43 /* MapIcon.png in Resources */,
 				E907106E1AAB3F40000C8D43 /* SettingsIcon.png in Resources */,
+				E9D17CFF1AAB4D5800742700 /* icon@3x.png in Resources */,
 				E90710631AAB383E000C8D43 /* GoogleMaps.bundle in Resources */,
 				E51680E51AAAE1D70047DFE8 /* icon_me@2x.png in Resources */,
 				E90710681AAB3B7F000C8D43 /* Default-568h@2x.png in Resources */,
+				E9D17CFE1AAB4D5800742700 /* icon@2x.png in Resources */,
+				E907107E1AAB4638000C8D43 /* TutorialIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E51680FA1AAB36060047DFE8 /* GoogleDataProvider.m in Sources */,
+				E907107A1AAB445E000C8D43 /* AlertViewController.m in Sources */,
 				E51680ED1AAB01DC0047DFE8 /* GooglePlace.m in Sources */,
+				E90710771AAB444C000C8D43 /* TutorialViewController.m in Sources */,
 				E524AD391AAAD6ED008FF283 /* ViewController.m in Sources */,
 				E524AD361AAAD6EC008FF283 /* AppDelegate.m in Sources */,
 				E524AD331AAAD6EC008FF283 /* main.m in Sources */,
