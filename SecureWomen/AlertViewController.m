@@ -9,13 +9,18 @@
 #import "AlertViewController.h"
 #import "SettingsKeys.h"
 #import <Social/Social.h>
+#import <CoreLocation/CoreLocation.h>
 
 @import Accounts;
 
-#define TWEET_TEXT               @"Test Tweet 4"        //@"Please Help"
-#define POST_TEXT_TO_FB          @"Test Post"
+#define HELP_TEXT               @"Need Help at Current Location"
+#define POST_TEXT_TO_FB          @"Need Help at Current Location"
 
-@interface AlertViewController ()
+@interface AlertViewController () <CLLocationManagerDelegate>
+
+@property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, retain) CLLocation *currentLocation;
+@property (nonatomic, retain) NSString *locationDescription;
 
 @end
 
@@ -25,6 +30,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor : DEFAULT_COLOR];
+    
+    _locationDescription = @"";
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    
+    if([[[UIDevice currentDevice] systemVersion] integerValue] >= 8.0)
+        [_locationManager requestWhenInUseAuthorization];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,23 +54,47 @@
 }
 */
 
-- (IBAction)cautionButtonPressed:(id)sender
-{
-    NSLog(@"cautionButtonPressed");
+#pragma mark - Location Manager Delegates
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
+    float OSVersion = [[[UIDevice currentDevice]systemVersion]integerValue];
+    
+    //since location status is only available on 8.0 above. Prior version(<8.0) will have to start updating without any condition.
+    
+    if(OSVersion <= 8.0 || (OSVersion>= 8.0 && status == kCLAuthorizationStatusAuthorizedWhenInUse))
+        [_locationManager startUpdatingLocation];
 }
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
+    
+    CLLocation *currentLocation = [locations firstObject];
+    
+    if (currentLocation) {
+        [_locationManager stopUpdatingLocation];
+        _currentLocation = currentLocation;
+    }
+    
+}
+
+#pragma mark - Button Actions
 
 - (IBAction)alertButtonPressed:(id)sender
 {
     NSLog(@"alertButtonPressed");
+    
+    _locationDescription = [NSString stringWithFormat:@"%@ %@",HELP_TEXT, [_currentLocation description]];
     [self postToTwitter];
 }
+
+#pragma mark - User Defined Methods
 
 - (void)postToTwitter
 {
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [tweetSheet setInitialText:TWEET_TEXT];
+        
+        [tweetSheet setInitialText:_locationDescription];
         [tweetSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
             [self postToFB];
         }];
@@ -82,7 +118,7 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         SLComposeViewController *fbSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [fbSheet setInitialText:POST_TEXT_TO_FB];
+        [fbSheet setInitialText:_locationDescription];
         [self presentViewController:fbSheet animated:YES completion:nil];
     }
     else
@@ -117,7 +153,7 @@
             {
                 ACAccount *acct = [arrayOfAccounts objectAtIndex:0];
                 
-                SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"]  parameters:[NSDictionary dictionaryWithObject:TWEET_TEXT forKey:@"status"]];
+                SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"]  parameters:[NSDictionary dictionaryWithObject:_locationDescription forKey:@"status"]];
                 
                 [postRequest setAccount:acct];
                 [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error)
