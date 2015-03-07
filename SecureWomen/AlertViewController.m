@@ -10,7 +10,9 @@
 #import "SettingsKeys.h"
 #import <Social/Social.h>
 
-#define TWEET_TEXT               @"Test Tweet"        //@"Please Help"
+@import Accounts;
+
+#define TWEET_TEXT               @"Test Tweet 4"        //@"Please Help"
 #define POST_TEXT_TO_FB          @"Test Post"
 
 @interface AlertViewController ()
@@ -49,7 +51,8 @@
 {
     NSLog(@"alertButtonPressed");
     [self postToTwitter];
-    [self postToFB];
+//    [self postToFB];
+//    [self postToTwitterWithoutUsingTweetSheet];
 }
 
 - (void)postToTwitter
@@ -92,10 +95,60 @@
     }
 }
 
-- (void)sendMessageForHelp
+- (void)postToTwitterWithoutUsingTweetSheet
 {
+    ACAccountStore *account = [[ACAccountStore alloc] init];
+    ACAccountType *accountType = [account accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
+    //hear before posting u can allow user to select the account
+    NSArray *arrayOfAccons = [account accountsWithAccountType:accountType];
+    for(ACAccount *acc in arrayOfAccons)
+    {
+        NSLog(@"%@",acc.username);
+    }
     
+    // Request access from the user to access their Twitter account
+    [account requestAccessToAccountsWithType:accountType options:nil completion:^(BOOL granted, NSError *error) {
+        if (granted == YES)
+        {
+            NSArray *arrayOfAccounts = [account accountsWithAccountType:accountType];
+            if ([arrayOfAccounts count] > 0)
+            {
+                ACAccount *acct = [arrayOfAccounts objectAtIndex:0];
+                
+                SLRequest *postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodPOST URL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update.json"]  parameters:[NSDictionary dictionaryWithObject:TWEET_TEXT forKey:@"status"]];
+                
+                [postRequest setAccount:acct];
+                [postRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error)
+                 {
+                     if(error)
+                     {
+                         //error while posting the tweet
+                         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Twitter" message:@"Error in posting" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                         [alert show];
+                     }
+                     else
+                     {
+                         // successful posting
+                         NSLog(@"Twitter response, HTTP response: %i", [urlResponse statusCode]);
+                         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Twitter" message:@"Successfully posted" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                         [alert show];
+                         
+                     }
+                 }];
+            }
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Twitter" message:@"You have no twitter account" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+            }
+        }
+        else
+        {
+            //user not set any of the accounts
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Twitter" message:@"Permission not granted" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
+    }];
 }
-
 
 @end
