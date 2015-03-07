@@ -46,6 +46,8 @@
 		E9D17D021AAB51BA00742700 /* CautionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D001AAB51BA00742700 /* CautionButton.png */; };
 		E9D17D031AAB51BA00742700 /* AlertButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D011AAB51BA00742700 /* AlertButton.jpg */; };
 		E9D17D051AAB54AE00742700 /* redd.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D041AAB54AE00742700 /* redd.png */; };
+		E9D17D071AAB59CA00742700 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D17D061AAB59CA00742700 /* Twitter.framework */; };
+		E9D17D091AAB5A5700742700 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D17D081AAB5A5700742700 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		E9D17D001AAB51BA00742700 /* CautionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CautionButton.png; sourceTree = "<group>"; };
 		E9D17D011AAB51BA00742700 /* AlertButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlertButton.jpg; sourceTree = "<group>"; };
 		E9D17D041AAB54AE00742700 /* redd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redd.png; sourceTree = "<group>"; };
+		E9D17D061AAB59CA00742700 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E9D17D081AAB5A5700742700 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9D17D091AAB5A5700742700 /* Social.framework in Frameworks */,
+				E9D17D071AAB59CA00742700 /* Twitter.framework in Frameworks */,
 				E524AD711AAAD9D9008FF283 /* SystemConfiguration.framework in Frameworks */,
 				E524AD6F1AAAD9CD008FF283 /* QuartzCore.framework in Frameworks */,
 				E524AD6D1AAAD9C4008FF283 /* OpenGLES.framework in Frameworks */,
@@ -169,6 +175,8 @@
 		E524AD241AAAD6EC008FF283 = {
 			isa = PBXGroup;
 			children = (
+				E9D17D081AAB5A5700742700 /* Social.framework */,
+				E9D17D061AAB59CA00742700 /* Twitter.framework */,
 				E524AD2F1AAAD6EC008FF283 /* SecureWomen */,
 				E524AD491AAAD6ED008FF283 /* SecureWomenTests */,
 				E524AD2E1AAAD6EC008FF283 /* Products */,
