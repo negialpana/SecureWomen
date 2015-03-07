@@ -10,4 +10,7 @@
 
 @interface AlertViewController : UIViewController
 
+- (IBAction)cautionButtonPressed:(id)sender;
+- (IBAction)alertButtonPressed:(id)sender;
+
 @end

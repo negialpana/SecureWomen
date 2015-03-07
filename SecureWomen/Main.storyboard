@@ -214,7 +214,53 @@
                     <view key="view" contentMode="scaleToFill" id="MNa-ba-3Kd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eT-nb-st0">
+                                <rect key="frame" x="85" y="80" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZbU-cb-7P5"/>
+                                    <constraint firstAttribute="width" constant="150" id="eto-Qw-W85"/>
+                                </constraints>
+                                <state key="normal" image="CautionButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cautionButtonPressed:" destination="jq2-eZ-lxd" eventType="touchUpInside" id="wiX-VC-gwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-tL-RiU" userLabel="ButtonAlert">
+                                <rect key="frame" x="85" y="300" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="KPD-S0-amG"/>
+                                    <constraint firstAttribute="width" constant="150" id="fSH-rN-gl4"/>
+                                </constraints>
+                                <state key="normal" image="redd.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertButtonPressed:" destination="jq2-eZ-lxd" eventType="touchUpInside" id="4WB-Zk-J1g"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-d4-Enu">
+                                <rect key="frame" x="115" y="350" width="100" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="GHt-PO-cAE"/>
+                                    <constraint firstAttribute="width" constant="100" id="W0o-Dj-gEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9eT-nb-st0" secondAttribute="centerX" id="Ixr-Ng-VXN"/>
+                            <constraint firstItem="Uru-tL-RiU" firstAttribute="top" secondItem="9eT-nb-st0" secondAttribute="bottom" constant="70" id="OaP-zo-6r0"/>
+                            <constraint firstItem="IhL-d4-Enu" firstAttribute="leading" secondItem="Uru-tL-RiU" secondAttribute="leading" constant="30" id="WxW-T2-kwZ"/>
+                            <constraint firstItem="IhL-d4-Enu" firstAttribute="top" secondItem="Uru-tL-RiU" secondAttribute="top" constant="50" id="aND-3A-7eq"/>
+                            <constraint firstAttribute="centerX" secondItem="Uru-tL-RiU" secondAttribute="centerX" id="rMM-cG-DRe"/>
+                            <constraint firstItem="9eT-nb-st0" firstAttribute="top" secondItem="MNa-ba-3Kd" secondAttribute="topMargin" constant="80" id="u7e-A5-mfp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alert" image="AlertIcon.png" selectedImage="AlertIcon.png" id="9Rf-BO-LxG">
                         <userDefinedRuntimeAttributes>
@@ -253,6 +299,7 @@
     <resources>
         <image name="AlertIcon" width="30" height="55"/>
         <image name="AlertIcon.png" width="30" height="30"/>
+        <image name="CautionButton.png" width="200" height="200"/>
         <image name="MapIcon" width="30" height="55"/>
         <image name="MapIcon.png" width="30" height="30"/>
         <image name="SettingsIcon" width="30" height="55"/>
@@ -260,6 +307,7 @@
         <image name="TutorialIcon" width="30" height="55"/>
         <image name="TutorialIcon.png" width="30" height="30"/>
         <image name="icon_me.png" width="30" height="55"/>
+        <image name="redd.png" width="150" height="150"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

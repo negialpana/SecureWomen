@@ -43,6 +43,9 @@
 		E90710811AAB46A1000C8D43 /* AlertIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E90710801AAB46A1000C8D43 /* AlertIcon.png */; };
 		E9D17CFE1AAB4D5800742700 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17CFC1AAB4D5800742700 /* icon@2x.png */; };
 		E9D17CFF1AAB4D5800742700 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17CFD1AAB4D5800742700 /* icon@3x.png */; };
+		E9D17D021AAB51BA00742700 /* CautionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D001AAB51BA00742700 /* CautionButton.png */; };
+		E9D17D031AAB51BA00742700 /* AlertButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D011AAB51BA00742700 /* AlertButton.jpg */; };
+		E9D17D051AAB54AE00742700 /* redd.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D041AAB54AE00742700 /* redd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		E90710801AAB46A1000C8D43 /* AlertIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertIcon.png; sourceTree = "<group>"; };
 		E9D17CFC1AAB4D5800742700 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		E9D17CFD1AAB4D5800742700 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		E9D17D001AAB51BA00742700 /* CautionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CautionButton.png; sourceTree = "<group>"; };
+		E9D17D011AAB51BA00742700 /* AlertButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AlertButton.jpg; sourceTree = "<group>"; };
+		E9D17D041AAB54AE00742700 /* redd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redd.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,9 @@
 				E90710801AAB46A1000C8D43 /* AlertIcon.png */,
 				E9D17CFC1AAB4D5800742700 /* icon@2x.png */,
 				E9D17CFD1AAB4D5800742700 /* icon@3x.png */,
+				E9D17D001AAB51BA00742700 /* CautionButton.png */,
+				E9D17D011AAB51BA00742700 /* AlertButton.jpg */,
+				E9D17D041AAB54AE00742700 /* redd.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,13 +342,16 @@
 			files = (
 				E90710811AAB46A1000C8D43 /* AlertIcon.png in Resources */,
 				E524AD411AAAD6ED008FF283 /* LaunchScreen.xib in Resources */,
+				E9D17D031AAB51BA00742700 /* AlertButton.jpg in Resources */,
 				E51680E71AAAE6350047DFE8 /* Main.storyboard in Resources */,
 				E524AD3E1AAAD6ED008FF283 /* Images.xcassets in Resources */,
 				E907106C1AAB3E0E000C8D43 /* MapIcon.png in Resources */,
 				E907106E1AAB3F40000C8D43 /* SettingsIcon.png in Resources */,
+				E9D17D021AAB51BA00742700 /* CautionButton.png in Resources */,
 				E9D17CFF1AAB4D5800742700 /* icon@3x.png in Resources */,
 				E90710631AAB383E000C8D43 /* GoogleMaps.bundle in Resources */,
 				E51680E51AAAE1D70047DFE8 /* icon_me@2x.png in Resources */,
+				E9D17D051AAB54AE00742700 /* redd.png in Resources */,
 				E90710681AAB3B7F000C8D43 /* Default-568h@2x.png in Resources */,
 				E9D17CFE1AAB4D5800742700 /* icon@2x.png in Resources */,
 				E907107E1AAB4638000C8D43 /* TutorialIcon.png in Resources */,

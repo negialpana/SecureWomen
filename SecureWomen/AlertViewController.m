@@ -36,4 +36,15 @@
 }
 */
 
+- (IBAction)cautionButtonPressed:(id)sender
+{
+    NSLog(@"cautionButtonPressed");
+}
+
+- (IBAction)alertButtonPressed:(id)sender
+{
+    NSLog(@"alertButtonPressed");
+
+}
+
 @end
