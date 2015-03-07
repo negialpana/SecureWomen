@@ -15,7 +15,6 @@
 		E51680FA1AAB36060047DFE8 /* GoogleDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E51680F91AAB36060047DFE8 /* GoogleDataProvider.m */; };
 		E51680FF1AAB654A0047DFE8 /* MarkerInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E51680FE1AAB654A0047DFE8 /* MarkerInfoView.xib */; };
 		E51681051AAB66690047DFE8 /* MarkerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = E51681041AAB66690047DFE8 /* MarkerInfoView.m */; };
-		E51681071AAB69170047DFE8 /* generic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E51681061AAB69170047DFE8 /* generic@2x.png */; };
 		E524AD331AAAD6EC008FF283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD321AAAD6EC008FF283 /* main.m */; };
 		E524AD361AAAD6EC008FF283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD351AAAD6EC008FF283 /* AppDelegate.m */; };
 		E524AD391AAAD6ED008FF283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD381AAAD6ED008FF283 /* ViewController.m */; };
@@ -51,6 +50,9 @@
 		E9D17D051AAB54AE00742700 /* redd.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D041AAB54AE00742700 /* redd.png */; };
 		E9D17D071AAB59CA00742700 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D17D061AAB59CA00742700 /* Twitter.framework */; };
 		E9D17D091AAB5A5700742700 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D17D081AAB5A5700742700 /* Social.framework */; };
+		E9D17D0B1AAB817B00742700 /* policeman.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D0A1AAB817B00742700 /* policeman.png */; };
+		E9D17D0D1AAB85FF00742700 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D0C1AAB85FF00742700 /* Default-667h@2x.png */; };
+		E9D17D0F1AAB86CE00742700 /* policemanIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9D17D0E1AAB86CE00742700 /* policemanIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +79,6 @@
 		E51680FE1AAB654A0047DFE8 /* MarkerInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfoView.xib; sourceTree = "<group>"; };
 		E51681031AAB66690047DFE8 /* MarkerInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarkerInfoView.h; path = ../MarkerInfoView.h; sourceTree = "<group>"; };
 		E51681041AAB66690047DFE8 /* MarkerInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarkerInfoView.m; path = ../MarkerInfoView.m; sourceTree = "<group>"; };
-		E51681061AAB69170047DFE8 /* generic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "generic@2x.png"; sourceTree = "<group>"; };
 		E524AD2D1AAAD6EC008FF283 /* SecureWomen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureWomen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E524AD311AAAD6EC008FF283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E524AD321AAAD6EC008FF283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -123,6 +124,9 @@
 		E9D17D041AAB54AE00742700 /* redd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redd.png; sourceTree = "<group>"; };
 		E9D17D061AAB59CA00742700 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		E9D17D081AAB5A5700742700 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E9D17D0A1AAB817B00742700 /* policeman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = policeman.png; sourceTree = "<group>"; };
+		E9D17D0C1AAB85FF00742700 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		E9D17D0E1AAB86CE00742700 /* policemanIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = policemanIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +229,6 @@
 				E51680FE1AAB654A0047DFE8 /* MarkerInfoView.xib */,
 				E51681031AAB66690047DFE8 /* MarkerInfoView.h */,
 				E51681041AAB66690047DFE8 /* MarkerInfoView.m */,
-				E51681061AAB69170047DFE8 /* generic@2x.png */,
 				E90710641AAB3A1C000C8D43 /* Resources */,
 				E51680E31AAADB5C0047DFE8 /* Frameworks */,
 				E524AD3D1AAAD6ED008FF283 /* Images.xcassets */,
@@ -266,6 +269,7 @@
 			children = (
 				E51680E41AAAE1D70047DFE8 /* icon_me@2x.png */,
 				E90710671AAB3B7F000C8D43 /* Default-568h@2x.png */,
+				E9D17D0C1AAB85FF00742700 /* Default-667h@2x.png */,
 				E907106B1AAB3E0E000C8D43 /* MapIcon.png */,
 				E907106D1AAB3F40000C8D43 /* SettingsIcon.png */,
 				E907107C1AAB4638000C8D43 /* TutorialIcon.png */,
@@ -275,6 +279,8 @@
 				E9D17D001AAB51BA00742700 /* CautionButton.png */,
 				E9D17D011AAB51BA00742700 /* AlertButton.jpg */,
 				E9D17D041AAB54AE00742700 /* redd.png */,
+				E9D17D0A1AAB817B00742700 /* policeman.png */,
+				E9D17D0E1AAB86CE00742700 /* policemanIcon.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -372,7 +378,9 @@
 				E51680E51AAAE1D70047DFE8 /* icon_me@2x.png in Resources */,
 				E9D17D051AAB54AE00742700 /* redd.png in Resources */,
 				E51680FF1AAB654A0047DFE8 /* MarkerInfoView.xib in Resources */,
-				E51681071AAB69170047DFE8 /* generic@2x.png in Resources */,
+				E9D17D0D1AAB85FF00742700 /* Default-667h@2x.png in Resources */,
+				E9D17D0F1AAB86CE00742700 /* policemanIcon.png in Resources */,
+				E9D17D0B1AAB817B00742700 /* policeman.png in Resources */,
 				E90710681AAB3B7F000C8D43 /* Default-568h@2x.png in Resources */,
 				E9D17CFE1AAB4D5800742700 /* icon@2x.png in Resources */,
 				E907107E1AAB4638000C8D43 /* TutorialIcon.png in Resources */,

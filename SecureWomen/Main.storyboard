@@ -117,9 +117,9 @@
         <scene sceneID="UK5-fD-DWn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jle-iB-eqV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby Police Station" image="MapIcon.png" selectedImage="MapIcon.png" id="DKu-At-VZr">
+                    <tabBarItem key="tabBarItem" title="Nearby Police Station" image="policemanIcon.png" selectedImage="policemanIcon.png" id="DKu-At-VZr">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="MapIcon"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="policemanIcon"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -200,21 +200,35 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-d4-Enu">
-                                <rect key="frame" x="115" y="259" width="100" height="48"/>
+                                <rect key="frame" x="112" y="234" width="100" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="GHt-PO-cAE"/>
+                                    <constraint firstAttribute="height" constant="40" id="GHt-PO-cAE"/>
                                     <constraint firstAttribute="width" constant="100" id="W0o-Dj-gEd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.8243407352418971" blue="0.065940471421061186" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Social Media" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2X-gE-A5P">
+                                <rect key="frame" x="110" y="282" width="108" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="0CJ-Ca-3vr"/>
+                                    <constraint firstAttribute="height" constant="44" id="VbN-nh-NBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="0.91061358450442831" blue="0.069713420965476391" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Uru-tL-RiU" secondAttribute="centerY" id="LH2-0l-zug"/>
-                            <constraint firstItem="IhL-d4-Enu" firstAttribute="leading" secondItem="Uru-tL-RiU" secondAttribute="leading" constant="30" id="WxW-T2-kwZ"/>
-                            <constraint firstItem="IhL-d4-Enu" firstAttribute="top" secondItem="Uru-tL-RiU" secondAttribute="top" constant="50" id="aND-3A-7eq"/>
+                            <constraint firstItem="b2X-gE-A5P" firstAttribute="top" secondItem="IhL-d4-Enu" secondAttribute="bottom" constant="8" id="PXH-G7-lOM"/>
+                            <constraint firstItem="IhL-d4-Enu" firstAttribute="leading" secondItem="Uru-tL-RiU" secondAttribute="leading" constant="27" id="WxW-T2-kwZ"/>
+                            <constraint firstItem="IhL-d4-Enu" firstAttribute="top" secondItem="Uru-tL-RiU" secondAttribute="top" constant="25" id="aND-3A-7eq"/>
+                            <constraint firstItem="Uru-tL-RiU" firstAttribute="centerX" secondItem="b2X-gE-A5P" secondAttribute="centerX" constant="-4" id="mBn-6t-ptd"/>
                             <constraint firstAttribute="centerX" secondItem="Uru-tL-RiU" secondAttribute="centerX" id="rMM-cG-DRe"/>
                         </constraints>
                     </view>
@@ -282,11 +296,11 @@
     <resources>
         <image name="AlertIcon" width="30" height="55"/>
         <image name="AlertIcon.png" width="30" height="30"/>
-        <image name="MapIcon" width="30" height="55"/>
-        <image name="MapIcon.png" width="30" height="30"/>
         <image name="TutorialIcon" width="30" height="55"/>
         <image name="TutorialIcon.png" width="30" height="30"/>
         <image name="icon_me.png" width="30" height="55"/>
+        <image name="policemanIcon" width="30" height="55"/>
+        <image name="policemanIcon.png" width="30" height="30"/>
         <image name="redd.png" width="150" height="150"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
