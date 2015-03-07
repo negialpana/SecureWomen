@@ -22,7 +22,6 @@
 @property (nonatomic, assign) NSInteger selectionType;
 - (IBAction)segmentTapped:(id)sender;
 
-@property (nonatomic, retain) NSArray *searchTypes;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
@@ -32,7 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:DEFAULT_COLOR];
-    _searchTypes =  @[@"Hospital",@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
     
     _locatonManager = [[CLLocationManager alloc] init];
     _locatonManager.delegate = self;

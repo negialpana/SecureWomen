@@ -9,7 +9,7 @@
 #import "TutorialViewController.h"
 #import "SettingsKeys.h"
 
-#define TUTORIAL_TEXT @"This app is build to provide secuity to women using two features.\n\n\n - First one is posting to her social media account on Twitter and facebook just by clicking one button along with her current location and date-time values. \n\n - Other one is listing out nearby police stations to find help and reach in case of emergency."
+#define TUTORIAL_TEXT @"This app is build to provide secuity to women using two features.\n\n\n - First one is posting help message along with her current location and date-time values to her social media account on Twitter and facebook just by clicking one button. \n\n - Other one is listing out nearby police stations to find help and reach in case of emergency."
 
 @interface TutorialViewController ()
 

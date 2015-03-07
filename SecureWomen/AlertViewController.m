@@ -13,8 +13,7 @@
 
 @import Accounts;
 
-#define HELP_TEXT               @"Need Help at Current Location"
-#define POST_TEXT_TO_FB          @"Need Help at Current Location"
+#define HELP_TEXT               @"Need Help at Location"
 
 @interface AlertViewController () <CLLocationManagerDelegate>
 
@@ -59,7 +58,7 @@
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
     float OSVersion = [[[UIDevice currentDevice]systemVersion]integerValue];
     
-    //since location status is only available on 8.0 above. Prior version(<8.0) will have to start updating without any condition.
+    //since locationStatus is only available on 8.0 above. Prior version(<8.0) will have to start updating without any condition.
     
     if(OSVersion <= 8.0 || (OSVersion>= 8.0 && status == kCLAuthorizationStatusAuthorizedWhenInUse))
         [_locationManager startUpdatingLocation];
@@ -95,11 +94,15 @@
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         
         [tweetSheet setInitialText:_locationDescription];
+        
         [tweetSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
             [self postToFB];
         }];
         
-        [self presentViewController:tweetSheet animated:YES completion:nil];
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+        });
+        
     }
     else
     {
@@ -119,7 +122,10 @@
     {
         SLComposeViewController *fbSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [fbSheet setInitialText:_locationDescription];
-        [self presentViewController:fbSheet animated:YES completion:nil];
+        
+        dispatch_async(dispatch_get_main_queue(), ^ {
+            [self presentViewController:fbSheet animated:YES completion:nil];
+        });
     }
     else
     {
