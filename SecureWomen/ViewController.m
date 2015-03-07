@@ -42,6 +42,8 @@
 -(void)mapView:(GMSMapView *)mapView idleAtCameraPosition:(GMSCameraPosition *)position{
     
     [self reverseGeoCode:position.target];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    //update the map view
 }
 
 -(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status{
@@ -73,13 +75,13 @@
     [geocode reverseGeocodeCoordinate:coordinate completionHandler:^(GMSReverseGeocodeResponse * response, NSError * error) {
         
         if (response) {
-         GMSAddress *address =    [response firstResult];
-         self.addressLabel.text= @"";
-         NSArray *addressArray =  [address lines];
-        for(id obj  in addressArray){
-            self.addressLabel.text = [self.addressLabel.text stringByAppendingString:obj];
-
-        }
+            GMSAddress *address =    [response firstResult];
+            self.addressLabel.text= @"";
+            NSArray *addressArray =  [address lines];
+            for(id obj  in addressArray){
+                self.addressLabel.text = [self.addressLabel.text stringByAppendingString:obj];
+                
+            }
             [UIView animateWithDuration:.25 animations:^{
                 [self.view layoutIfNeeded];
             }];
@@ -97,7 +99,7 @@
 
 -(void)PlaceTypeTableViewController:(PlaceTypeTableViewController *)self completedWithSelectionType:(NSNumber *)type{
     
-    
+    _selectionType = type;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
