@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Ft-i2-fXs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Ft-i2-fXs">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -113,11 +113,11 @@
             </objects>
             <point key="canvasLocation" x="2089" y="628"/>
         </scene>
-        <!--Nearby Help-->
+        <!--Nearby Police Station-->
         <scene sceneID="UK5-fD-DWn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jle-iB-eqV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nearby Help" image="MapIcon.png" selectedImage="MapIcon.png" id="DKu-At-VZr">
+                    <tabBarItem key="tabBarItem" title="Nearby Police Station" image="MapIcon.png" selectedImage="MapIcon.png" id="DKu-At-VZr">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="MapIcon"/>
                         </userDefinedRuntimeAttributes>
@@ -167,36 +167,12 @@
                     <connections>
                         <segue destination="jq2-eZ-lxd" kind="relationship" relationship="viewControllers" id="shk-fc-75i"/>
                         <segue destination="jle-iB-eqV" kind="relationship" relationship="viewControllers" id="La3-RD-4pG"/>
-                        <segue destination="bxH-lx-Jif" kind="relationship" relationship="viewControllers" id="hnc-uB-GkR"/>
                         <segue destination="47U-Ay-MrX" kind="relationship" relationship="viewControllers" id="HWS-Mc-wwq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yku-eW-Ld0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-42" y="1639"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="o9S-MY-csO">
-            <objects>
-                <viewController id="bxH-lx-Jif" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uDy-Pr-fda"/>
-                        <viewControllerLayoutGuide type="bottom" id="xKC-Ma-cuN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lYC-Fu-kd1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="SettingsIcon.png" selectedImage="SettingsIcon.png" id="nTi-1a-5ii">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="SelectedImage" value="SettingsIcon"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb8-5c-RYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="685" y="1294"/>
         </scene>
         <!--Alert-->
         <scene sceneID="jrf-aT-tq8">
@@ -210,21 +186,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eT-nb-st0">
-                                <rect key="frame" x="85" y="80" width="150" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="ZbU-cb-7P5"/>
-                                    <constraint firstAttribute="width" constant="150" id="eto-Qw-W85"/>
-                                </constraints>
-                                <state key="normal" image="CautionButton.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cautionButtonPressed:" destination="jq2-eZ-lxd" eventType="touchUpInside" id="wiX-VC-gwJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uru-tL-RiU" userLabel="ButtonAlert">
-                                <rect key="frame" x="85" y="300" width="150" height="150"/>
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KPD-S0-amG"/>
                                     <constraint firstAttribute="width" constant="150" id="fSH-rN-gl4"/>
@@ -237,7 +200,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhL-d4-Enu">
-                                <rect key="frame" x="115" y="350" width="100" height="48"/>
+                                <rect key="frame" x="115" y="259" width="100" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="GHt-PO-cAE"/>
@@ -249,12 +212,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="9eT-nb-st0" secondAttribute="centerX" id="Ixr-Ng-VXN"/>
-                            <constraint firstItem="Uru-tL-RiU" firstAttribute="top" secondItem="9eT-nb-st0" secondAttribute="bottom" constant="70" id="OaP-zo-6r0"/>
+                            <constraint firstAttribute="centerY" secondItem="Uru-tL-RiU" secondAttribute="centerY" id="LH2-0l-zug"/>
                             <constraint firstItem="IhL-d4-Enu" firstAttribute="leading" secondItem="Uru-tL-RiU" secondAttribute="leading" constant="30" id="WxW-T2-kwZ"/>
                             <constraint firstItem="IhL-d4-Enu" firstAttribute="top" secondItem="Uru-tL-RiU" secondAttribute="top" constant="50" id="aND-3A-7eq"/>
                             <constraint firstAttribute="centerX" secondItem="Uru-tL-RiU" secondAttribute="centerX" id="rMM-cG-DRe"/>
-                            <constraint firstItem="9eT-nb-st0" firstAttribute="top" secondItem="MNa-ba-3Kd" secondAttribute="topMargin" constant="80" id="u7e-A5-mfp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Alert" image="AlertIcon.png" selectedImage="AlertIcon.png" id="9Rf-BO-LxG">
@@ -265,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXF-ti-p6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="1954"/>
+            <point key="canvasLocation" x="691" y="1622"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="Q6g-tj-OPS">
@@ -278,27 +239,51 @@
                     <view key="view" contentMode="scaleToFill" id="52U-TG-M1h">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Security" translatesAutoresizingMaskIntoConstraints="NO" id="Wzk-kN-Fde">
+                                <rect key="frame" x="16" y="82" width="288" height="437"/>
+                                <color key="backgroundColor" red="1" green="0.039965592699999997" blue="0.056591195679999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Security in Our Hands" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wud-ub-loe">
+                                <rect key="frame" x="16" y="45" width="288" height="27"/>
+                                <color key="backgroundColor" red="1" green="0.039965592699999997" blue="0.056591195679999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wud-ub-loe" firstAttribute="leading" secondItem="52U-TG-M1h" secondAttribute="leadingMargin" id="69X-cO-xbl"/>
+                            <constraint firstItem="Wzk-kN-Fde" firstAttribute="top" secondItem="wud-ub-loe" secondAttribute="bottom" constant="10" id="7tc-oD-LDN"/>
+                            <constraint firstItem="wud-ub-loe" firstAttribute="top" secondItem="aGl-Bv-Mr0" secondAttribute="bottom" constant="25" id="OI1-1G-V6q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wzk-kN-Fde" secondAttribute="trailing" id="UNB-hk-3lH"/>
+                            <constraint firstItem="hFU-sG-p2L" firstAttribute="top" secondItem="Wzk-kN-Fde" secondAttribute="bottom" id="kIH-cI-fso"/>
+                            <constraint firstItem="Wzk-kN-Fde" firstAttribute="leading" secondItem="52U-TG-M1h" secondAttribute="leadingMargin" id="lJM-DX-kiY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wud-ub-loe" secondAttribute="trailing" id="sgm-29-Mxv"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tutorial" image="TutorialIcon.png" selectedImage="TutorialIcon.png" id="1gk-zm-2u8">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="TutorialIcon"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tutorialTextView" destination="Wzk-kN-Fde" id="k9y-FF-rjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASB-c9-EOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="2619"/>
+            <point key="canvasLocation" x="685" y="2449"/>
         </scene>
     </scenes>
     <resources>
         <image name="AlertIcon" width="30" height="55"/>
         <image name="AlertIcon.png" width="30" height="30"/>
-        <image name="CautionButton.png" width="200" height="200"/>
         <image name="MapIcon" width="30" height="55"/>
         <image name="MapIcon.png" width="30" height="30"/>
-        <image name="SettingsIcon" width="30" height="55"/>
-        <image name="SettingsIcon.png" width="30" height="30"/>
         <image name="TutorialIcon" width="30" height="55"/>
         <image name="TutorialIcon.png" width="30" height="30"/>
         <image name="icon_me.png" width="30" height="55"/>

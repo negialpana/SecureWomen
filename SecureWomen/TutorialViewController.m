@@ -9,7 +9,11 @@
 #import "TutorialViewController.h"
 #import "SettingsKeys.h"
 
+#define TUTORIAL_TEXT @"This app is build to provide secuity to women using 2 features.\n\nFirst one is posting to her social media account on Twitter and facebook just by clicking one button. \nOther one is listing out nearby police stations to find help and reach in case of emergency."
+
 @interface TutorialViewController ()
+
+@property (weak, nonatomic) IBOutlet UITextView *tutorialTextView;
 
 @end
 
@@ -18,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:DEFAULT_COLOR];
+    self.tutorialTextView.textColor = [UIColor yellowColor];
+    self.tutorialTextView.text = TUTORIAL_TEXT;
 }
 
 - (void)didReceiveMemoryWarning {
