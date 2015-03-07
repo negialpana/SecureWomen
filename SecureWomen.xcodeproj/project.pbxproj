@@ -12,6 +12,7 @@
 		E51680EA1AAB001E0047DFE8 /* PlaceMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = E51680E91AAB001E0047DFE8 /* PlaceMarker.m */; };
 		E51680ED1AAB01DC0047DFE8 /* GooglePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = E51680EC1AAB01DC0047DFE8 /* GooglePlace.m */; };
 		E51680F01AAB1CCF0047DFE8 /* PlaceTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51680EF1AAB1CCF0047DFE8 /* PlaceTypeTableViewController.m */; };
+		E51680FA1AAB36060047DFE8 /* GoogleDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E51680F91AAB36060047DFE8 /* GoogleDataProvider.m */; };
 		E524AD331AAAD6EC008FF283 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD321AAAD6EC008FF283 /* main.m */; };
 		E524AD361AAAD6EC008FF283 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD351AAAD6EC008FF283 /* AppDelegate.m */; };
 		E524AD391AAAD6ED008FF283 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E524AD381AAAD6ED008FF283 /* ViewController.m */; };
@@ -57,6 +58,8 @@
 		E51680EC1AAB01DC0047DFE8 /* GooglePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlace.m; sourceTree = "<group>"; };
 		E51680EE1AAB1CCE0047DFE8 /* PlaceTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceTypeTableViewController.h; sourceTree = "<group>"; };
 		E51680EF1AAB1CCF0047DFE8 /* PlaceTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceTypeTableViewController.m; sourceTree = "<group>"; };
+		E51680F81AAB36060047DFE8 /* GoogleDataProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDataProvider.h; sourceTree = "<group>"; };
+		E51680F91AAB36060047DFE8 /* GoogleDataProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDataProvider.m; sourceTree = "<group>"; };
 		E524AD2D1AAAD6EC008FF283 /* SecureWomen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureWomen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E524AD311AAAD6EC008FF283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E524AD321AAAD6EC008FF283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				E51680E91AAB001E0047DFE8 /* PlaceMarker.m */,
 				E907106F1AAB408D000C8D43 /* SettingsViewController.h */,
 				E90710701AAB408D000C8D43 /* SettingsViewController.m */,
+				E51680F81AAB36060047DFE8 /* GoogleDataProvider.h */,
+				E51680F91AAB36060047DFE8 /* GoogleDataProvider.m */,
 				E51680E61AAAE6350047DFE8 /* Main.storyboard */,
 				E90710641AAB3A1C000C8D43 /* Resources */,
 				E51680E31AAADB5C0047DFE8 /* Frameworks */,
@@ -327,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51680FA1AAB36060047DFE8 /* GoogleDataProvider.m in Sources */,
 				E51680ED1AAB01DC0047DFE8 /* GooglePlace.m in Sources */,
 				E524AD391AAAD6ED008FF283 /* ViewController.m in Sources */,
 				E524AD361AAAD6EC008FF283 /* AppDelegate.m in Sources */,
