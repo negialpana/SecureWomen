@@ -12,7 +12,7 @@
 
 @protocol PlaceTypeTableViewControllerDelegate <NSObject>
 
--(void)PlaceTypeTableViewController :(PlaceTypeTableViewController*)self completedWithSelectionType:(NSNumber *)type;
+-(void)PlaceTypeTableViewController :(PlaceTypeTableViewController*)self completedWithSelectionType:(NSInteger)type;
 
 @end
 

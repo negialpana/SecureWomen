@@ -12,6 +12,7 @@
 
 @property (nonatomic, retain) NSArray *array;
 @property (nonatomic, assign) NSInteger selectiontype;
+- (IBAction)donePressed:(id)sender;
 
 @end
 
@@ -110,4 +111,11 @@
 }
 */
 
+- (IBAction)donePressed:(id)sender {
+    
+    [self.delegate PlaceTypeTableViewController:self completedWithSelectionType:_selectiontype];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 @end

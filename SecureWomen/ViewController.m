@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *pinImageVerticalContraint;
 @property (nonatomic, retain) CLLocationManager *locatonManager;
 
-@property (nonatomic, assign) NSNumber *selectionType;
+@property (nonatomic, assign) NSInteger selectionType;
 - (IBAction)segmentTapped:(id)sender;
 
 @property (nonatomic, retain) NSArray *searchTypes;
@@ -42,7 +42,6 @@
 -(void)mapView:(GMSMapView *)mapView idleAtCameraPosition:(GMSCameraPosition *)position{
     
     [self reverseGeoCode:position.target];
-    [self.navigationController popToRootViewControllerAnimated:YES];
     //update the map view
 }
 
@@ -97,9 +96,10 @@
 }
 
 
--(void)PlaceTypeTableViewController:(PlaceTypeTableViewController *)self completedWithSelectionType:(NSNumber *)type{
+-(void)PlaceTypeTableViewController:(PlaceTypeTableViewController *)self completedWithSelectionType:(NSInteger )type{
     
     _selectionType = type;
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
