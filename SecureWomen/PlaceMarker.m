@@ -22,7 +22,7 @@
     if (self) {
         self.place = place;
         self.position = place.cordi;
-        self.icon = [UIImage imageNamed:@"TODO"];
+        self.icon = [UIImage imageNamed:@"icon_me@2x"];
         self.groundAnchor = CGPointMake(0.5, 1);
         self.appearAnimation = kGMSMarkerAnimationPop;
     }

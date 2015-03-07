@@ -15,9 +15,6 @@
     if (self) {
         self.name = [dictionary objectForKey:@"name"];
         self.addr = [dictionary objectForKey:@"vicinity"];
-        
-        
-        
         NSDictionary *location = [[dictionary objectForKey:@"geometry"] objectForKey:@"location"];
         CLLocationDegrees lat = [[location objectForKey:@"lat"] doubleValue];
         CLLocationDegrees lng = [[location objectForKey:@"lng"] doubleValue];

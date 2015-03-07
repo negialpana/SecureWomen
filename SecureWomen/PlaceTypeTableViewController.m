@@ -112,9 +112,11 @@
 
 - (IBAction)donePressed:(id)sender {
     
-    [self.delegate PlaceTypeTableViewController:self completedWithSelectionType:_selectiontype];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self.delegate respondsToSelector:@selector(PlaceTypeTableViewController:completedWithSelectionType:)]) {
+        [self.delegate PlaceTypeTableViewController:self completedWithSelectionType:_selectiontype];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    }
     
 }
 @end

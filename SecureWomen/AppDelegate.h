@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 
-#define GOOGLE_MAPS_APIKEY @"AIzaSyCoaRLrn2Qu2qbMhwtV1ktty4WjkiRzt_Y"
+#define GOOGLE_MAPS_APIKEY @"AIzaSyAsdhmhXnO7h4PpfzOIzyuZHT53qWbB7rw"
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

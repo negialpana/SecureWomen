@@ -7,12 +7,14 @@
 #import "AppDelegate.h"
 #import "PlaceTypeTableViewController.h"
 #import "SettingsKeys.h"
+#import "GoogleDataProvider.h"
 
 @interface ViewController ()<CLLocationManagerDelegate, GMSMapViewDelegate, PlaceTypeTableViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *pinImage;
 @property (weak, nonatomic) IBOutlet GMSMapView *mapView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *pinImageVerticalContraint;
 @property (nonatomic, retain) CLLocationManager *locatonManager;
+@property (nonatomic, retain) CLLocation *cernterLocation;
 
 @property (nonatomic, assign) NSInteger selectionType;
 - (IBAction)segmentTapped:(id)sender;
@@ -35,6 +37,8 @@
     
     if([[[UIDevice currentDevice] systemVersion] integerValue] >= 8.0)
         [_locatonManager requestWhenInUseAuthorization];
+    
+   
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -64,6 +68,19 @@
     if (currentLocation) {
         _mapView.camera = [GMSCameraPosition cameraWithTarget:currentLocation.coordinate zoom:15 bearing:0 viewingAngle:0];
         [_locatonManager stopUpdatingLocation];
+        _cernterLocation = currentLocation;
+        
+        GoogleDataProvider *dataProvder = [[GoogleDataProvider alloc] init];
+        [dataProvder fetchNearByPlace:_cernterLocation.coordinate andRadius:1000 withCompletionHandler:^(NSError *error, NSArray *places) {
+            if (!error) {
+                for(NSDictionary *obj in places){
+                 
+                    NSLog(@"%@",[obj description]);
+                }
+            }
+            
+        }];
+
     }
     
 }
