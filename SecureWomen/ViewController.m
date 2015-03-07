@@ -33,7 +33,9 @@
     _locatonManager = [[CLLocationManager alloc] init];
     _locatonManager.delegate = self;
     _mapView.delegate = self;
-    [_locatonManager requestWhenInUseAuthorization];
+    
+    if([[[UIDevice currentDevice] systemVersion] integerValue] >= 8.0)
+        [_locatonManager requestWhenInUseAuthorization];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
