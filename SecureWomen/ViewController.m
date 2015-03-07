@@ -72,28 +72,32 @@
         _mapView.camera = [GMSCameraPosition cameraWithTarget:currentLocation.coordinate zoom:15 bearing:0 viewingAngle:0];
         [_locatonManager stopUpdatingLocation];
         _cernterLocation = currentLocation;
-        
-        GoogleDataProvider *dataProvder = [[GoogleDataProvider alloc] init];
-        if (_selectionType == 0) {
-            dataProvder.type = @"police";
-        }else{
-            dataProvder.type = @"hospital";
-        }
-        [dataProvder fetchNearByPlace:_cernterLocation.coordinate andRadius:[self mapRadius] withCompletionHandler:^(NSError *error, NSArray *places) {
-            [self.mapView clear];
-            if (!error) {
-                for(GooglePlace *obj in places){
-                 
-                    PlaceMarker *maker = [[PlaceMarker alloc] initWithPlace:obj];
-                   // maker.place = obj;
-                    maker.map = self.mapView;
-                }
-            }
-            
-        }];
-
+        [self refreshViewWithNearBy];
+       
     }
     
+}
+
+-(void)refreshViewWithNearBy{
+    GoogleDataProvider *dataProvder = [[GoogleDataProvider alloc] init];
+    if (_selectionType == 0) {
+        dataProvder.type = @"police";
+    }else{
+        dataProvder.type = @"hospital";
+    }
+    [dataProvder fetchNearByPlace:_cernterLocation.coordinate andRadius:[self mapRadius] withCompletionHandler:^(NSError *error, NSArray *places) {
+        [self.mapView clear];
+        if (!error) {
+            for(GooglePlace *obj in places){
+                
+                PlaceMarker *maker = [[PlaceMarker alloc] initWithPlace:obj];
+                // maker.place = obj;
+                maker.map = self.mapView;
+            }
+        }
+        
+    }];
+
 }
 
 -(UIView *)mapView:(GMSMapView *)mapView markerInfoContents:(GMSMarker *)marker{
@@ -149,6 +153,8 @@
 -(void)PlaceTypeTableViewController:(PlaceTypeTableViewController *)self completedWithSelectionType:(NSInteger )type{
     
     _selectionType = type;
+   // Alpana please check why the delegate is not hit and giving error on uncomenting the code.
+   // [self refreshViewWithNearBy];
 
 }
 - (void)didReceiveMemoryWarning {

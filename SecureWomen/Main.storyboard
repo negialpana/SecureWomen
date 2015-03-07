@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4Ft-i2-fXs">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -49,7 +50,7 @@
                     <navigationItem key="navigationItem" id="6Hq-pz-3QM">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="MlK-ZU-MXc">
-                            <rect key="frame" x="28" y="7" width="240" height="30"/>
+                            <rect key="frame" x="40" y="7" width="240" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Normal"/>
@@ -59,11 +60,6 @@
                                 <action selector="segmentTapped:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Uwt-rW-Dvf"/>
                             </connections>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Y8r-sI-zD8">
-                            <connections>
-                                <segue destination="gRK-9k-5jK" kind="modal" identifier="Types Segue" id="Glz-Sc-CwV"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="3Q1-lw-Wr6" id="HDh-lC-ehl"/>

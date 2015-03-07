@@ -17,6 +17,6 @@
 
 @interface PlaceTypeTableViewController : UITableViewController
 
-@property (nonatomic, assign) id <PlaceTypeTableViewControllerDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id<PlaceTypeTableViewControllerDelegate> delegate;
 
 @end
