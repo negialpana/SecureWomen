@@ -51,8 +51,6 @@
 {
     NSLog(@"alertButtonPressed");
     [self postToTwitter];
-//    [self postToFB];
-//    [self postToTwitterWithoutUsingTweetSheet];
 }
 
 - (void)postToTwitter
@@ -61,6 +59,10 @@
     {
         SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [tweetSheet setInitialText:TWEET_TEXT];
+        [tweetSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+            [self postToFB];
+        }];
+        
         [self presentViewController:tweetSheet animated:YES completion:nil];
     }
     else
@@ -99,7 +101,7 @@
 {
     ACAccountStore *account = [[ACAccountStore alloc] init];
     ACAccountType *accountType = [account accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
-    //hear before posting u can allow user to select the account
+    //before posting u can allow user to select the account
     NSArray *arrayOfAccons = [account accountsWithAccountType:accountType];
     for(ACAccount *acc in arrayOfAccons)
     {
