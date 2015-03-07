@@ -11,6 +11,10 @@
 
 @interface GoogleDataProvider : NSObject
 
+@property (nonatomic, retain) NSString *type;
+
 - (void)fetchNearByPlace:(CLLocationCoordinate2D)coordinate andRadius:(double)radius withCompletionHandler:(void (^)(NSError *error, NSArray *places))completionHandler;
+
+
 
 @end

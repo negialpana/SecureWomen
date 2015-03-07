@@ -8,6 +8,9 @@
 #import "PlaceTypeTableViewController.h"
 #import "SettingsKeys.h"
 #import "GoogleDataProvider.h"
+#import "PlaceMarker.h"
+#import "GooglePlace.h"
+#import "MarkerInfoView.h"
 
 @interface ViewController ()<CLLocationManagerDelegate, GMSMapViewDelegate, PlaceTypeTableViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *pinImage;
@@ -29,11 +32,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view setBackgroundColor:DEFAULT_COLOR];
-    _searchTypes =  @[@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
+    _searchTypes =  @[@"Hospital",@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
     
     _locatonManager = [[CLLocationManager alloc] init];
     _locatonManager.delegate = self;
-    _mapView.delegate = self;
+    self.mapView.delegate = self;
     
     if([[[UIDevice currentDevice] systemVersion] integerValue] >= 8.0)
         [_locatonManager requestWhenInUseAuthorization];
@@ -71,17 +74,46 @@
         _cernterLocation = currentLocation;
         
         GoogleDataProvider *dataProvder = [[GoogleDataProvider alloc] init];
-        [dataProvder fetchNearByPlace:_cernterLocation.coordinate andRadius:1000 withCompletionHandler:^(NSError *error, NSArray *places) {
+        if (_selectionType == 0) {
+            dataProvder.type = @"police";
+        }else{
+            dataProvder.type = @"hospital";
+        }
+        [dataProvder fetchNearByPlace:_cernterLocation.coordinate andRadius:[self mapRadius] withCompletionHandler:^(NSError *error, NSArray *places) {
+            [self.mapView clear];
             if (!error) {
-                for(NSDictionary *obj in places){
+                for(GooglePlace *obj in places){
                  
-                    NSLog(@"%@",[obj description]);
+                    PlaceMarker *maker = [[PlaceMarker alloc] initWithPlace:obj];
+                   // maker.place = obj;
+                    maker.map = self.mapView;
                 }
             }
             
         }];
 
     }
+    
+}
+
+-(UIView *)mapView:(GMSMapView *)mapView markerInfoContents:(GMSMarker *)marker{
+    
+    NSArray *arr =[[NSBundle mainBundle] loadNibNamed:@"MarkerInfoView" owner:self options:nil];
+    MarkerInfoView *markerInfoView = [arr objectAtIndex:0];
+    PlaceMarker *placemaker = (PlaceMarker *)marker;
+    
+    markerInfoView.namelabel.text = placemaker.place.name;
+    
+    return markerInfoView;
+    
+}
+
+-(double)mapRadius{
+    GMSVisibleRegion region = [self.mapView.projection visibleRegion];
+    float verticalDis = GMSGeometryDistance(region.farLeft, region.nearLeft);
+    float horizontalDis = GMSGeometryDistance(region.farLeft, region.farRight);
+    
+    return MAX(horizontalDis, verticalDis);
     
 }
 

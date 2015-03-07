@@ -21,22 +21,22 @@
         
         self.cordi = CLLocationCoordinate2DMake(lat, lng);
         
-        NSDictionary *photos = [[dictionary objectForKey:@"photos"] firstObject];
+      //  NSDictionary *photos = [[dictionary objectForKey:@"photos"] firstObject];
         
-        self.photoref = [photos objectForKey:@"photo_reference"];
+//        self.photoref = [photos objectForKey:@"photo_reference"];
         
-        NSString *foundType = @"restaurant";
-        
-        NSArray *possibleTypes = ([acceptedTypes count] > 0) ? acceptedTypes : @[@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
-        
-        for (NSString *type in dictionary) {
-            if([possibleTypes containsObject:type])
-            {
-                foundType = type;
-                break;
-            }
-        }
-        self.placeType = foundType;
+//        NSString *foundType = @"restaurant";
+//        
+//        NSArray *possibleTypes = ([acceptedTypes count] > 0) ? acceptedTypes : @[@"bakery", @"bar", @"cafe", @"grocery_or_supermarket", @"restaurant"];
+//        
+//        for (NSString *type in dictionary) {
+//            if([possibleTypes containsObject:type])
+//            {
+//                foundType = type;
+//                break;
+//            }
+//        }
+//        self.placeType = foundType;
     }
     return self;
 }

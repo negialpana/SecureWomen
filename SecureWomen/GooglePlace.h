@@ -18,6 +18,7 @@
 @property (nonatomic, retain) NSString *placeType;
 @property (nonatomic, retain) NSString *photoref;
 @property (nonatomic, retain) UIImage *photo;
+- (instancetype)initWithDictionary : (NSDictionary *)dictionary andAcceptedTypes : (NSArray *) acceptedTypes;
 
 
 @end

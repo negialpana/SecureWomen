@@ -6,11 +6,9 @@
 //
 
 #import "PlaceMarker.h"
-#import "GooglePlace.h"
 
 @interface PlaceMarker ()
 
-@property (nonatomic, retain) GooglePlace *place;
 
 @end
 
@@ -22,7 +20,7 @@
     if (self) {
         self.place = place;
         self.position = place.cordi;
-        self.icon = [UIImage imageNamed:@"icon_me@2x"];
+        self.icon = [UIImage imageNamed:@"MapIcon.png"];
         self.groundAnchor = CGPointMake(0.5, 1);
         self.appearAnimation = kGMSMarkerAnimationPop;
     }
